@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    cypher.lang
+    Copyright (C) 2017 Matthias Baumgarten <matthias.baumgarten@web.de>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<language id="cypher" _name="Cypher" version="2.0" _section="Source">
+    <metadata>
+        <property name="mimetypes">text/cypher</property>
+        <property name="globs">*.cql;*.cypher</property>
+    </metadata>
+
+    <styles>
+        <style id="cypher-comment" _name="Comment" map-to="def:comment"/>
+        <style id="cypher-keyword" _name="Cypher Keyword" map-to="def:keyword"/>
+        <style id="cypher-type" _name="Data Type" map-to="def:type"/>
+    </styles>
+
+    <definitions>
+        <context id="keywords" style-ref="cypher-keyword">
+            <keyword>MATCH</keyword>
+            <keyword>MERGE</keyword>
+            <keyword>UNIQUE</keyword>
+            <keyword>REMOVE</keyword>
+            <keyword>FOREACH</keyword>
+            <keyword>ORDER BY</keyword>
+            <keyword>SKIP</keyword>
+            <keyword>LIMIT</keyword>
+            <keyword>WHERE</keyword>
+            <keyword>WITH</keyword>
+            <keyword>AS</keyword>
+            <keyword>UNWIND</keyword>
+            <keyword>UNION</keyword>
+            <keyword>RETURN</keyword>
+            <keyword>SET</keyword>
+            <keyword>CREATE</keyword>
+            <keyword>OPTIONAL</keyword>
+            <keyword>DELETE</keyword>
+            <keyword>CONSTRAINT</keyword>
+            <keyword>DROP</keyword>
+            <keyword>INDEX</keyword>
+            <keyword>KEYS</keyword>
+            <keyword>YIELD</keyword>
+            <keyword>CALL</keyword>
+            <keyword>ON</keyword>
+            <keyword>LOAD CSV FROM</keyword>
+            <keyword>LOAD CSV WITH HEADERS FROM</keyword>
+            <keyword>FIELDTERMINATOR</keyword>
+            <keyword>AND</keyword>
+            <keyword>OR</keyword>
+            <keyword>XOR</keyword>
+            <keyword>NOT</keyword>
+            <keyword>IN</keyword>
+            <keyword>STARTS WITH</keyword>
+            <keyword>ENDS WITH</keyword>
+            <keyword>CONTAINS</keyword>
+            <keyword>CASE</keyword>
+        </context>
+
+        <context id="types" style-ref="cypher-type">
+            <keyword>null</keyword>
+        </context>
+
+        <context id="comment-route" end-at-line-end="true" style-ref="cypher-comment">
+            <start>#</start>
+            <end>$</end>
+        </context>
+
+        <context id="comment-slash" end-at-line-end="true" style-ref="cypher-comment">
+            <start>\/\/</start>
+            <end>$</end>
+        </context>
+
+        <context id="cypher">
+            <include>
+                <context ref="keywords"/>
+                <context ref="types"/>
+                <context ref="comment-route"/>
+                <context ref="comment-slash"/>
+            </include>
+        </context>
+    </definitions>
+</language>
