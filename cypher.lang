@@ -3,12 +3,12 @@
     cypher.lang
     Copyright (C) 2017 Matthias Baumgarten <matthias.baumgarten@web.de>
 
-    This program is free software: you can redistribute it and/or modify
+    cypher.lang is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
+    cypher.lang is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -26,6 +26,11 @@
         <style id="cypher-comment" _name="Comment" map-to="def:comment"/>
         <style id="cypher-keyword" _name="Cypher Keyword" map-to="def:keyword"/>
         <style id="cypher-type" _name="Data Type" map-to="def:type"/>
+        <style id="string" _name="String" map-to="def:string"/>
+        <style id="char" _name="Character" map-to="def:string"/>
+        <style id="decimal" _name="Decimal number" map-to="def:decimal"/>
+        <style id="floating-point" _name="Floating point number" map-to="def:floating-point"/>
+        <style id="special-char" _name="Special Character" map-to="def:special-char"/>
     </styles>
 
     <definitions>
@@ -67,15 +72,12 @@
             <keyword>ENDS WITH</keyword>
             <keyword>CONTAINS</keyword>
             <keyword>CASE</keyword>
+            <keyword>ASSERT</keyword>
+            <keyword>IS</keyword>
         </context>
 
         <context id="types" style-ref="cypher-type">
             <keyword>null</keyword>
-        </context>
-
-        <context id="comment-route" end-at-line-end="true" style-ref="cypher-comment">
-            <start>#</start>
-            <end>$</end>
         </context>
 
         <context id="comment-slash" end-at-line-end="true" style-ref="cypher-comment">
@@ -83,12 +85,50 @@
             <end>$</end>
         </context>
 
+        <context id="string" style-ref="string" end-at-line-end="true">
+            <start>L?"</start>
+            <end>"</end>
+        </context>
+
+        <context id="char" style-ref="string" end-at-line-end="true">
+            <start>L?'</start>
+            <end>'</end>
+        </context>
+
+        <context id="decimal" style-ref="decimal">
+            <match extended="true">
+                (?&lt;![\w\.])
+                (0|[1-9][0-9]*)[uUlL]*
+                (?![\w\.])
+            </match>
+        </context>
+
+        <context id="float" style-ref="floating-point">
+            <match extended="true">
+                (?&lt;![\w\.])
+                ((\.[0-9]+ | [0-9]+\.[0-9]*) ([Ee][+-]?[0-9]*)? |
+                ([0-9]+[Ee][+-]?[0-9]*))
+                [fFlL]?
+                (?![\w\.])
+            </match>
+        </context>
+
+        <context id="special-char" style-ref="special-char">
+            <match extended="true">
+                (\[|\(|\]|\)|{|}|;|:|,)
+            </match>
+        </context>
+
         <context id="cypher">
             <include>
                 <context ref="keywords"/>
                 <context ref="types"/>
-                <context ref="comment-route"/>
                 <context ref="comment-slash"/>
+                <context ref="string"/>
+                <context ref="char"/>
+                <context ref="decimal"/>
+                <context ref="float"/>
+                <context ref="special-char"/>
             </include>
         </context>
     </definitions>
