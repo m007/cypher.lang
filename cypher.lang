@@ -16,10 +16,11 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<language id="cypher" _name="Cypher" version="2.0" _section="Source">
+<language id="cypher" _name="Cypher Query Language" version="2.0" _section="Source">
     <metadata>
-        <property name="mimetypes">text/cypher</property>
+        <property name="mimetypes">text/x-cql;text/x-cypher</property>
         <property name="globs">*.cql;*.cypher</property>
+        <property name="line-comment-start">//</property>
     </metadata>
 
     <styles>
@@ -74,6 +75,11 @@
             <keyword>CASE</keyword>
             <keyword>ASSERT</keyword>
             <keyword>IS</keyword>
+            <keyword>START</keyword>
+            <keyword>DESC</keyword>
+            <keyword>DESCENDING</keyword>
+            <keyword>ASC</keyword>
+            <keyword>ASCENDING</keyword>
         </context>
 
         <context id="types" style-ref="cypher-type">
@@ -115,7 +121,7 @@
 
         <context id="special-char" style-ref="special-char">
             <match extended="true">
-                (\[|\(|\]|\)|{|}|;|:|,)
+                (\[|\(|\]|\)|{|}|;|:|,|\*|\+|\/|\-|=)
             </match>
         </context>
 
