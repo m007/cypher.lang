@@ -54,6 +54,7 @@
             <keyword>CREATE</keyword>
             <keyword>OPTIONAL</keyword>
             <keyword>DELETE</keyword>
+            <keyword>DETACH DELETE</keyword>
             <keyword>CONSTRAINT</keyword>
             <keyword>DROP</keyword>
             <keyword>INDEX</keyword>
