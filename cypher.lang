@@ -81,6 +81,7 @@
             <keyword>DESCENDING</keyword>
             <keyword>ASC</keyword>
             <keyword>ASCENDING</keyword>
+            <keyword>EXISTS</keyword>
         </context>
 
         <context id="types" style-ref="cypher-type">
