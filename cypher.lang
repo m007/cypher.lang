@@ -36,52 +36,52 @@
 
     <definitions>
         <context id="keywords" style-ref="cypher-keyword">
-            <keyword>MATCH</keyword>
-            <keyword>MERGE</keyword>
-            <keyword>UNIQUE</keyword>
-            <keyword>REMOVE</keyword>
-            <keyword>FOREACH</keyword>
-            <keyword>ORDER BY</keyword>
-            <keyword>SKIP</keyword>
-            <keyword>LIMIT</keyword>
-            <keyword>WHERE</keyword>
-            <keyword>WITH</keyword>
+            <keyword>AND</keyword>
+            <keyword>ASCENDING</keyword>
+            <keyword>ASC</keyword>
             <keyword>AS</keyword>
-            <keyword>UNWIND</keyword>
-            <keyword>UNION</keyword>
-            <keyword>RETURN</keyword>
-            <keyword>SET</keyword>
-            <keyword>CREATE</keyword>
-            <keyword>OPTIONAL</keyword>
-            <keyword>DELETE</keyword>
-            <keyword>DETACH DELETE</keyword>
-            <keyword>CONSTRAINT</keyword>
-            <keyword>DROP</keyword>
-            <keyword>INDEX</keyword>
-            <keyword>KEYS</keyword>
-            <keyword>YIELD</keyword>
+            <keyword>ASSERT</keyword>
             <keyword>CALL</keyword>
-            <keyword>ON</keyword>
+            <keyword>CASE</keyword>
+            <keyword>CONSTRAINT</keyword>
+            <keyword>CONTAINS</keyword>
+            <keyword>CREATE</keyword>
+            <keyword>DELETE</keyword>
+            <keyword>DESCENDING</keyword>
+            <keyword>DESC</keyword>
+            <keyword>DETACH DELETE</keyword>
+            <keyword>DROP</keyword>
+            <keyword>ENDS WITH</keyword>
+            <keyword>EXISTS</keyword>
+            <keyword>FIELDTERMINATOR</keyword>
+            <keyword>FOREACH</keyword>
+            <keyword>INDEX</keyword>
+            <keyword>IN</keyword>
+            <keyword>IS</keyword>
+            <keyword>KEYS</keyword>
+            <keyword>LIMIT</keyword>
             <keyword>LOAD CSV FROM</keyword>
             <keyword>LOAD CSV WITH HEADERS FROM</keyword>
-            <keyword>FIELDTERMINATOR</keyword>
-            <keyword>AND</keyword>
-            <keyword>OR</keyword>
-            <keyword>XOR</keyword>
+            <keyword>MATCH</keyword>
+            <keyword>MERGE</keyword>
             <keyword>NOT</keyword>
-            <keyword>IN</keyword>
-            <keyword>STARTS WITH</keyword>
-            <keyword>ENDS WITH</keyword>
-            <keyword>CONTAINS</keyword>
-            <keyword>CASE</keyword>
-            <keyword>ASSERT</keyword>
-            <keyword>IS</keyword>
+            <keyword>ON</keyword>
+            <keyword>OPTIONAL</keyword>
+            <keyword>ORDER BY</keyword>
+            <keyword>OR</keyword>
+            <keyword>REMOVE</keyword>
+            <keyword>RETURN</keyword>
+            <keyword>SET</keyword>
+            <keyword>SKIP</keyword>
             <keyword>START</keyword>
-            <keyword>DESC</keyword>
-            <keyword>DESCENDING</keyword>
-            <keyword>ASC</keyword>
-            <keyword>ASCENDING</keyword>
-            <keyword>EXISTS</keyword>
+            <keyword>STARTS WITH</keyword>
+            <keyword>UNION</keyword>
+            <keyword>UNIQUE</keyword>
+            <keyword>UNWIND</keyword>
+            <keyword>WHERE</keyword>
+            <keyword>WITH</keyword>
+            <keyword>XOR</keyword>
+            <keyword>YIELD</keyword>
         </context>
 
         <context id="types" style-ref="cypher-type">
