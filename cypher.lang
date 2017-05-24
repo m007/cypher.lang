@@ -1,143 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    cypher.lang
-    Copyright (C) 2017 Matthias Baumgarten <matthias.baumgarten@web.de>
+  cypher.lang
+  Copyright (C) 2017 Matthias Baumgarten <matthias.baumgarten@web.de>
 
-    cypher.lang is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+  cypher.lang is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
 
-    cypher.lang is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+  cypher.lang is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <language id="cypher" _name="Cypher Query Language" version="2.0" _section="Source">
-    <metadata>
-        <property name="mimetypes">text/x-cql;text/x-cypher</property>
-        <property name="globs">*.cql;*.cypher</property>
-        <property name="line-comment-start">//</property>
-    </metadata>
+  <metadata>
+    <property name="mimetypes">text/x-cql;text/x-cypher</property>
+    <property name="globs">*.cql;*.cypher</property>
+    <property name="line-comment-start">//</property>
+  </metadata>
 
-    <styles>
-        <style id="cypher-comment" _name="Comment" map-to="def:comment"/>
-        <style id="cypher-keyword" _name="Cypher Keyword" map-to="def:keyword"/>
-        <style id="cypher-type" _name="Data Type" map-to="def:type"/>
-        <style id="string" _name="String" map-to="def:string"/>
-        <style id="char" _name="Character" map-to="def:string"/>
-        <style id="decimal" _name="Decimal number" map-to="def:decimal"/>
-        <style id="floating-point" _name="Floating point number" map-to="def:floating-point"/>
-        <style id="special-char" _name="Special Character" map-to="def:special-char"/>
-    </styles>
+  <styles>
+    <style id="cypher-comment" _name="Comment" map-to="def:comment"/>
+    <style id="cypher-keyword" _name="Cypher Keyword" map-to="def:keyword"/>
+    <style id="cypher-type" _name="Data Type" map-to="def:type"/>
+    <style id="string" _name="String" map-to="def:string"/>
+    <style id="char" _name="Character" map-to="def:string"/>
+    <style id="decimal" _name="Decimal number" map-to="def:decimal"/>
+    <style id="floating-point" _name="Floating point number" map-to="def:floating-point"/>
+    <style id="special-char" _name="Special Character" map-to="def:special-char"/>
+  </styles>
 
-    <definitions>
-        <context id="keywords" style-ref="cypher-keyword">
-            <keyword>AND</keyword>
-            <keyword>ASCENDING</keyword>
-            <keyword>ASC</keyword>
-            <keyword>AS</keyword>
-            <keyword>ASSERT</keyword>
-            <keyword>CALL</keyword>
-            <keyword>CASE</keyword>
-            <keyword>CONSTRAINT</keyword>
-            <keyword>CONTAINS</keyword>
-            <keyword>CREATE</keyword>
-            <keyword>DELETE</keyword>
-            <keyword>DESCENDING</keyword>
-            <keyword>DESC</keyword>
-            <keyword>DETACH DELETE</keyword>
-            <keyword>DROP</keyword>
-            <keyword>ENDS WITH</keyword>
-            <keyword>EXISTS</keyword>
-            <keyword>FIELDTERMINATOR</keyword>
-            <keyword>FOREACH</keyword>
-            <keyword>INDEX</keyword>
-            <keyword>IN</keyword>
-            <keyword>IS</keyword>
-            <keyword>KEYS</keyword>
-            <keyword>LIMIT</keyword>
-            <keyword>LOAD CSV FROM</keyword>
-            <keyword>LOAD CSV WITH HEADERS FROM</keyword>
-            <keyword>MATCH</keyword>
-            <keyword>MERGE</keyword>
-            <keyword>NOT</keyword>
-            <keyword>ON</keyword>
-            <keyword>OPTIONAL</keyword>
-            <keyword>ORDER BY</keyword>
-            <keyword>OR</keyword>
-            <keyword>REMOVE</keyword>
-            <keyword>RETURN</keyword>
-            <keyword>SET</keyword>
-            <keyword>SKIP</keyword>
-            <keyword>START</keyword>
-            <keyword>STARTS WITH</keyword>
-            <keyword>UNION</keyword>
-            <keyword>UNIQUE</keyword>
-            <keyword>UNWIND</keyword>
-            <keyword>WHERE</keyword>
-            <keyword>WITH</keyword>
-            <keyword>XOR</keyword>
-            <keyword>YIELD</keyword>
-        </context>
+  <definitions>
+    <context id="keywords" style-ref="cypher-keyword">
+      <keyword>AND</keyword>
+      <keyword>ASCENDING</keyword>
+      <keyword>ASC</keyword>
+      <keyword>AS</keyword>
+      <keyword>ASSERT</keyword>
+      <keyword>CALL</keyword>
+      <keyword>CASE</keyword>
+      <keyword>CONSTRAINT</keyword>
+      <keyword>CONTAINS</keyword>
+      <keyword>CREATE</keyword>
+      <keyword>DELETE</keyword>
+      <keyword>DESCENDING</keyword>
+      <keyword>DESC</keyword>
+      <keyword>DETACH DELETE</keyword>
+      <keyword>DROP</keyword>
+      <keyword>ENDS WITH</keyword>
+      <keyword>EXISTS</keyword>
+      <keyword>FIELDTERMINATOR</keyword>
+      <keyword>FOREACH</keyword>
+      <keyword>INDEX</keyword>
+      <keyword>IN</keyword>
+      <keyword>IS</keyword>
+      <keyword>KEYS</keyword>
+      <keyword>LIMIT</keyword>
+      <keyword>LOAD CSV FROM</keyword>
+      <keyword>LOAD CSV WITH HEADERS FROM</keyword>
+      <keyword>MATCH</keyword>
+      <keyword>MERGE</keyword>
+      <keyword>NOT</keyword>
+      <keyword>ON</keyword>
+      <keyword>OPTIONAL</keyword>
+      <keyword>ORDER BY</keyword>
+      <keyword>OR</keyword>
+      <keyword>REMOVE</keyword>
+      <keyword>RETURN</keyword>
+      <keyword>SET</keyword>
+      <keyword>SKIP</keyword>
+      <keyword>START</keyword>
+      <keyword>STARTS WITH</keyword>
+      <keyword>UNION</keyword>
+      <keyword>UNIQUE</keyword>
+      <keyword>UNWIND</keyword>
+      <keyword>WHERE</keyword>
+      <keyword>WITH</keyword>
+      <keyword>XOR</keyword>
+      <keyword>YIELD</keyword>
+    </context>
 
-        <context id="types" style-ref="cypher-type">
-            <keyword>null</keyword>
-        </context>
+    <context id="types" style-ref="cypher-type">
+      <keyword>null</keyword>
+    </context>
 
-        <context id="comment-slash" end-at-line-end="true" style-ref="cypher-comment">
-            <start>\/\/</start>
-            <end>$</end>
-        </context>
+    <context id="comment-slash" end-at-line-end="true" style-ref="cypher-comment">
+      <start>\/\/</start>
+      <end>$</end>
+    </context>
 
-        <context id="string" style-ref="string" end-at-line-end="true">
-            <start>L?"</start>
-            <end>"</end>
-        </context>
+    <context id="string" style-ref="string" end-at-line-end="true">
+      <start>L?"</start>
+      <end>"</end>
+    </context>
 
-        <context id="char" style-ref="string" end-at-line-end="true">
-            <start>L?'</start>
-            <end>'</end>
-        </context>
+    <context id="char" style-ref="string" end-at-line-end="true">
+      <start>L?'</start>
+      <end>'</end>
+    </context>
 
-        <context id="decimal" style-ref="decimal">
-            <match extended="true">
-                (?&lt;![\w\.])
-                (0|[1-9][0-9]*)[uUlL]*
-                (?![\w\.])
-            </match>
-        </context>
+    <context id="decimal" style-ref="decimal">
+      <match extended="true">
+        (?&lt;![\w\.])
+        (0|[1-9][0-9]*)[uUlL]*
+        (?![\w\.])
+      </match>
+    </context>
 
-        <context id="float" style-ref="floating-point">
-            <match extended="true">
-                (?&lt;![\w\.])
-                ((\.[0-9]+ | [0-9]+\.[0-9]*) ([Ee][+-]?[0-9]*)? |
-                ([0-9]+[Ee][+-]?[0-9]*))
-                [fFlL]?
-                (?![\w\.])
-            </match>
-        </context>
+    <context id="float" style-ref="floating-point">
+      <match extended="true">
+        (?&lt;![\w\.])
+        ((\.[0-9]+ | [0-9]+\.[0-9]*) ([Ee][+-]?[0-9]*)? |
+        ([0-9]+[Ee][+-]?[0-9]*))
+        [fFlL]?
+        (?![\w\.])
+      </match>
+    </context>
 
-        <context id="special-char" style-ref="special-char">
-            <match extended="true">
-                (\[|\(|\]|\)|{|}|;|:|,|\*|\+|\/|\-|=)
-            </match>
-        </context>
+    <context id="special-char" style-ref="special-char">
+      <match extended="true">
+        (\[|\(|\]|\)|{|}|;|:|,|\*|\+|\/|\-|=)
+      </match>
+    </context>
 
-        <context id="cypher">
-            <include>
-                <context ref="keywords"/>
-                <context ref="types"/>
-                <context ref="comment-slash"/>
-                <context ref="string"/>
-                <context ref="char"/>
-                <context ref="decimal"/>
-                <context ref="float"/>
-                <context ref="special-char"/>
-            </include>
-        </context>
-    </definitions>
+    <context id="cypher">
+      <include>
+        <context ref="keywords"/>
+        <context ref="types"/>
+        <context ref="comment-slash"/>
+        <context ref="string"/>
+        <context ref="char"/>
+        <context ref="decimal"/>
+        <context ref="float"/>
+        <context ref="special-char"/>
+      </include>
+    </context>
+  </definitions>
 </language>
